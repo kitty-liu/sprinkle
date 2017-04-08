@@ -33,12 +33,14 @@ function showNewCC() {
 }
 
 function changeCC() {
-
   var currentCC = document.getElementById('current-cc');
   var newCC = document.getElementById('frmCCNum');
-  console.log(currentCC);
-  console.log(newCC);
-  // currentCC.innerHTML = newCC.innerHTML;
+  currentCC.innerHTML = 'Ending in ' + newCC.value.substr(12);
+}
+
+function closeSave() {
+  var ccItem = document.getElementById('new-cc');
+  ccItem.style.display = 'none';
 }
 
 
@@ -46,5 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('button').addEventListener('click', showDonate);
   document.querySelector('#add-cc').addEventListener('click', showNewCC);
   document.querySelector('#save-link').addEventListener('click', changeCC);
+  document.querySelector('#save-link').addEventListener('click', closeSave);
 });
 
