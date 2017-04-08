@@ -194,11 +194,14 @@ h3 {
 }
 
 #frmMonthCC {
-	width: 90px;
+	width: 115px;
+	height: 30px;
 }
+
 
 #save-link {
 	float: right;
+	margin: 5px;
 }
 
 #charity {
@@ -208,4 +211,35 @@ h3 {
 
 a {
 	text-decoration: none;
+}
+
+.date-picker {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.select-style {
+	border: 3px solid #ccc;
+	padding: 5px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    /*background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;*/
+}
+
+.select-style select {
+    padding: 5px 8px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
 }
