@@ -3,10 +3,29 @@ body {
 	padding: 20px;
 	font-family: 'Lato', sans-serif;
 	font-size: 14px;
+	background-color: #f0f0f0;
+	/*background-image: url('confetti.png');*/
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.sprinkle-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #f0f0f0;
+}
+
+#before-success{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#after-success{
+	display: none;
+	flex-direction: column;
+	align-items: center;
 }
 
 .title {
@@ -20,6 +39,10 @@ img {
 
 #sprinkle {
 	width: 75px;
+}
+
+.success p {
+	margin: 5px;
 }
 
 .link {
@@ -158,7 +181,6 @@ h3 {
 
 #charity {
 	color:gray;
-	font-style: italic;
 	font-size: 12px;
 }
 

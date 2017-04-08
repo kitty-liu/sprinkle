@@ -22,9 +22,29 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+var finish = false;
+function buttonHandler() {
+  if (!finish) {
+    showDonate();
+    finish = true;
+  }
+  else {
+    donateSuccess();
+  }
+}
+
 function showDonate() {
   var donateItem = document.getElementById('donate-info');
   donateItem.style.display = 'block';
+}
+
+function donateSuccess() {
+  var beforeSuccess = document.getElementById('before-success');
+  beforeSuccess.style.display = 'none';
+  var afterSuccess = document.getElementById('after-success');
+  afterSuccess.style.display = 'flex';
+  var bodyItem = document.querySelector('body');
+  bodyItem.style.backgroundImage = 'url(\'confetti.png\')';
 }
 
 function showNewCC() {
@@ -45,7 +65,7 @@ function closeSave() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('button').addEventListener('click', showDonate);
+  document.querySelector('button').addEventListener('click', buttonHandler);
   document.querySelector('#add-cc').addEventListener('click', showNewCC);
   document.querySelector('#save-link').addEventListener('click', changeCC);
   document.querySelector('#save-link').addEventListener('click', closeSave);
