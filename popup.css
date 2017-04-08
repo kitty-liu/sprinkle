@@ -14,8 +14,12 @@ body {
 }
 
 img {
-	width: 50px;
+	width: 60px;
 	height: auto;
+}
+
+#sprinkle {
+	width: 75px;
 }
 
 .link {
@@ -68,11 +72,11 @@ h3 {
 
 /* Button 1 */
 .btn {
-	border: none;
 	font-family: inherit;
 	font-size: inherit;
-	color: inherit;
-	background: none;
+	color: #fff;
+	background: #7b97e7;
+	border: 3px solid #7b97e7;
 	cursor: pointer;
 	padding: 5px 10px;
 	display: inline-block;
@@ -108,15 +112,15 @@ h3 {
 }
 
 .btn-1 {
-	border: 3px solid #000;
-	color: #000;
+	color: #fff;
+	border: 3px solid #7b97e7;
 }
 
 /* Button 1a */
 .btn-1a:hover,
 .btn-1a:active {
-	color: #fff;
-	background: #7b97e7;
+	color: #7b97e7;
+	background: #f0f0f0;
 	border: 3px solid #7b97e7;
 }
 
