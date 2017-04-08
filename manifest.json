@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name":    "KitBrit",
+  "name":    "Sprinkle",
   "version": "0.0",
   "offline_enabled": true,
 
@@ -9,12 +9,13 @@
     "scripts": ["background.js"]
   },
 
-
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_title": "Click to open kitbrit!!!!"
+  "icons": { 
+    "128": "logo.png" 
   },
 
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
 
   "content_scripts": [{
     "matches":    ["<all_urls>"],
