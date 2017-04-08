@@ -115,8 +115,33 @@ h3 {
 }
 
 /* Form */
+.field-set {
+  	border: 1px solid #d6d6d6;
+}
+
 .form-group {
 	padding: 5px 0px;
 	display: flex;
 	flex-direction: column;
+}
+
+.form-row {
+	display: flex;
+	flex-direction: row;
+}
+
+#frmCCCVC {
+	width: 30px;
+}
+
+#frmNameCC {
+	width: 160px;
+}
+
+#frmMonthCC {
+	width: 110px;
+}
+
+#save-link {
+	float: right;
 }

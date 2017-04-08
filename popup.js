@@ -32,9 +32,19 @@ function showNewCC() {
   ccItem.style.display = 'block';
 }
 
+function changeCC() {
+
+  var currentCC = document.getElementById('current-cc');
+  var newCC = document.getElementById('frmCCNum');
+  console.log(currentCC);
+  console.log(newCC);
+  // currentCC.innerHTML = newCC.innerHTML;
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('button').addEventListener('click', showDonate);
   document.querySelector('#add-cc').addEventListener('click', showNewCC);
+  document.querySelector('#save-link').addEventListener('click', changeCC);
 });
 
