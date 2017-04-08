@@ -23,13 +23,18 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 function showDonate() {
-  console.log('asdfasdf');
   var donateItem = document.getElementById('donate-info');
-  console.log(donateItem)
   donateItem.style.display = 'block';
+}
+
+function showNewCC() {
+  var ccItem = document.getElementById('new-cc');
+  ccItem.style.display = 'block';
 }
 
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('button').addEventListener('click', showDonate);
+  document.querySelector('#add-cc').addEventListener('click', showNewCC);
 });
+

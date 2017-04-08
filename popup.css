@@ -56,6 +56,10 @@ h3 {
 	padding-top: 20px;
 }
 
+#new-cc {
+	display: none;
+}
+
 /* Button 1 */
 .btn {
 	border: none;
@@ -108,4 +112,11 @@ h3 {
 	color: #fff;
 	background: #7b97e7;
 	border: 3px solid #7b97e7;
+}
+
+/* Form */
+.form-group {
+	padding: 5px 0px;
+	display: flex;
+	flex-direction: column;
 }
