@@ -21,3 +21,15 @@ window.addEventListener('DOMContentLoaded', function () {
         setDOMInfo);
   });
 });
+
+function showDonate() {
+  console.log('asdfasdf');
+  var donateItem = document.getElementById('donate-info');
+  console.log(donateItem)
+  donateItem.style.display = 'block';
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('button').addEventListener('click', showDonate);
+});
