@@ -89,5 +89,6 @@ h3 {
 .btn-1a:hover,
 .btn-1a:active {
 	color: #fff;
-	background: #000;
+	background: #7b97e7;
+	border: 3px solid #7b97e7;
 }

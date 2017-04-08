@@ -1,7 +1,7 @@
 // Update the relevant fields with the new data
 function setDOMInfo(info) {
-  document.getElementById('total').textContent   = info.total;
-  document.getElementById('inputs').textContent  = info.inputs;
+  document.getElementById('Price').textContent   = info.Price;
+  document.getElementById('Donation').textContent  = info.Donation;
   document.getElementById('buttons').textContent = info.buttons;
 }
 

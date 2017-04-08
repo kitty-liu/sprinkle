@@ -11,8 +11,8 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
   if ((msg.from === 'popup') && (msg.subject === 'DOMInfo')) {
     
     var domInfo = {
-      total:   getPrice(window.location.href),
-      inputs:  document.querySelectorAll('input').length,
+      Price:   getPrice(window.location.href),
+      Donation:  getDonation(window.location.href),
       buttons: document.querySelectorAll('button').length
     };
 
@@ -24,27 +24,33 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
 
 
 function getPrice (url) {
-
-  var price;
-  var priceNum;
-  var ceiling;
-  var donation;
+  var classname;
   if (url.indexOf("forever21") !== -1){
-    price = document.getElementsByClassName("total_price")[0].innerHTML.substring(1); // gets the innerHTML -> $31.86
-    priceNum = parseFloat(price);
-    ceiling = Math.ceil(priceNum);
-    donation = Math.round(100*(ceiling - priceNum))/100;
+    classname = "total_price";
   } else if (url.indexOf("sephora") !== -1){
-    price = document.getElementsByClassName("Receipt-price")[0].innerHTML.substring(1); // gets the innerHTML -> $31.86
-    priceNum = parseFloat(price);
-    ceiling = Math.ceil(priceNum);
-    donation = Math.round(100*(ceiling - priceNum))/100;
-  }  
+    classname = "Receipt-price";
+  };
+  var price = document.getElementsByClassName(classname)[0].innerHTML;
+  return price;
+};
 
+function getDonation (url) {
+  var price = getPrice(url).substring(1);
+  var priceNum = parseFloat(price);
+  var ceiling = Math.ceil(priceNum);
+  var donationNum = Math.round(100*(ceiling - priceNum))/100;
+  var donation = (donationNum.toString()).split(".")[1];
+  if (donation.length == 1){
+    donation = donation + "0";
+  }
+  donation = "$0." + donation;
   if (donation == 0) {
-    donation = 1;
+    donation = "$1.00";
   }
   return donation;
 };
+
+
+
 
 
