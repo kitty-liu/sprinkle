@@ -41,8 +41,8 @@ img {
 	width: 75px;
 }
 
-.success p {
-	margin: 5px;
+.success {
+	text-align: center;
 }
 
 .link {
