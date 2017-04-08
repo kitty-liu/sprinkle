@@ -163,6 +163,23 @@ h3 {
 	flex-direction: row;
 }
 
+.form-group input:focus {
+    border: 3px solid #555;
+}
+
+.form-group input {
+    padding: 5px;
+    margin: 5px 0;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#payment {
+	color: #d6d6d6;
+}
+
 #frmCCCVC {
 	width: 30px;
 }
@@ -171,8 +188,13 @@ h3 {
 	width: 160px;
 }
 
+#frmCCNum {
+	margin-right: 10px;
+	width: 100px;
+}
+
 #frmMonthCC {
-	width: 110px;
+	width: 90px;
 }
 
 #save-link {

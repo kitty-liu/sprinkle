@@ -50,6 +50,9 @@ function donateSuccess() {
 function showNewCC() {
   var ccItem = document.getElementById('new-cc');
   ccItem.style.display = 'block';
+  var addCC = document.getElementById('add-cc');
+  addCC.style.display = 'none';
+
 }
 
 function changeCC() {
@@ -61,7 +64,11 @@ function changeCC() {
 function closeSave() {
   var ccItem = document.getElementById('new-cc');
   ccItem.style.display = 'none';
+  var addCC = document.getElementById('add-cc');
+  addCC.style.display = 'block';
 }
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
