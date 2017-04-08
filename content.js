@@ -29,6 +29,11 @@ function getPrice (url) {
     classname = "total_price";
   } else if (url.indexOf("sephora") !== -1){
     classname = "Receipt-price";
+  } else if (url.indexOf("peapod") !== -1){
+    classname = "checkout-lineItem--total";
+    var price = document.getElementsByClassName(classname)[0].childNodes[0].nextSibling.innerHTML.substring(7);
+    console.log(price);
+    return price;
   };
   var price = document.getElementsByClassName(classname)[0].innerHTML;
   return price;
