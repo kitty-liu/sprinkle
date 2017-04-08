@@ -19,6 +19,12 @@ img {
 }
 
 .link {
+	cursor: pointer;
+	color: #7b97e7;
+}
+
+.link:hover {
+	cursor: pointer;
 	text-decoration: underline;
 	color: #7b97e7;
 }
@@ -144,4 +150,14 @@ h3 {
 
 #save-link {
 	float: right;
+}
+
+#charity {
+	color:gray;
+	font-style: italic;
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
 }
