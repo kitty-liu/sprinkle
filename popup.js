@@ -36,6 +36,8 @@ function buttonHandler() {
 function showDonate() {
   var donateItem = document.getElementById('donate-info');
   donateItem.style.display = 'block';
+  var donateButton = document.getElementById('donate-button');
+  donateButton.innerHTML = 'Confirm';
 }
 
 function donateSuccess() {
