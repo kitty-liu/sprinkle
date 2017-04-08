@@ -24,12 +24,25 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
 
 
 function getPrice (url) {
-  if (url.indexOf("forever21") !== -1){
-    var price = document.getElementsByClassName("total_price")[0].innerHTML.substring(1); // gets the innerHTML -> $31.86
-    var priceNum = parseFloat(price);
-    var ceiling = Math.ceil(priceNum);
-    var donation = Math.round(100*(ceiling - priceNum))/100;
 
+  var price;
+  var priceNum;
+  var ceiling;
+  var donation;
+  if (url.indexOf("forever21") !== -1){
+    price = document.getElementsByClassName("total_price")[0].innerHTML.substring(1); // gets the innerHTML -> $31.86
+    priceNum = parseFloat(price);
+    ceiling = Math.ceil(priceNum);
+    donation = Math.round(100*(ceiling - priceNum))/100;
+  } else if (url.indexOf("sephora") !== -1){
+    price = document.getElementsByClassName("Receipt-price")[0].innerHTML.substring(1); // gets the innerHTML -> $31.86
+    priceNum = parseFloat(price);
+    ceiling = Math.ceil(priceNum);
+    donation = Math.round(100*(ceiling - priceNum))/100;
+  }  
+
+  if (donation == 0) {
+    donation = 1;
   }
   return donation;
 };
